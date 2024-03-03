@@ -1,13 +1,32 @@
 
-function App() {
+import { Container } from "react-bootstrap";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+// import HomeScreen from "./screens/HomeScreen";
+import { Outlet } from "react-router-dom";
+
+const App = () => {
+
   return (
-    <div className="App">
+    <>
+        <Header />
+        
+            <main className="py-3">
+              <Container>
+                <Outlet/>
+              </Container>
+            </main>
+
+       <Footer/>
       
-       <h1>heyyyyyy</h1>
-       {/* git config --global user.email */}
-       {/* git config --global user.name "Your Name" */}
-    </div>
-  );
+    </>
+    
+  )
 }
 
 export default App;
+
+
+{/* git config --global user.email */}
+       {/* git config --global user.name "Your Name" */}
+       {/* git config --global core.autocrlf false */}
